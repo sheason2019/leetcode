@@ -70,3 +70,29 @@ func TestSortedArrayToBST(t *testing.T) {
 
 	utils.JsonLog(node)
 }
+
+func createList(values []int) *ListNode {
+	if len(values) == 0 {
+		return nil
+	}
+
+	head := ListNode{Val: values[0]}
+	if len(values) == 1 {
+		return &head
+	}
+
+	ptr := &head
+	for i := 1; i < len(values); i++ {
+		ptr.Next = &ListNode{Val: values[i]}
+		ptr = ptr.Next
+	}
+
+	return &head
+}
+
+func TestSortedListToBST(t *testing.T) {
+	list := createList([]int{-10, -3, 0, 5, 9})
+	node := sortedListToBST(list)
+
+	utils.JsonLog(node)
+}
