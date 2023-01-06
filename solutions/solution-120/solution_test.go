@@ -22,3 +22,12 @@ func TestMaxProfit1(t *testing.T) {
 func TestMaxProfit2(t *testing.T) {
 	fmt.Println(maxProfit2([]int{3, 3, 5, 0, 0, 3, 1, 4}))
 }
+
+func TestMaxPathSum(t *testing.T) {
+	fmt.Println(maxPathSum(generateTree([]int{1, 2, 3})))
+	fmt.Println(maxPathSum(generateTree([]int{-10, 9, 20, null, null, 15, 7})))
+}
+
+func TestIsPalindrom(t *testing.T) {
+	fmt.Println(isPalindrome("A man, a plan, a canal: Panama"))
+}
