@@ -33,3 +33,27 @@ func TestMinCut(t *testing.T) {
 	fmt.Println(minCut(s))
 	fmt.Println(minCut("apjesgpsxoeiokmqmfgvjslcjukbqxpsobyhjpbgdfruqdkeiszrlmtwgfxyfostpqczidfljwfbbrflkgdvtytbgqalguewnhvvmcgxboycffopmtmhtfizxkmeftcucxpobxmelmjtuzigsxnncxpaibgpuijwhankxbplpyejxmrrjgeoevqozwdtgospohznkoyzocjlracchjqnggbfeebmuvbicbvmpuleywrpzwsihivnrwtxcukwplgtobhgxukwrdlszfaiqxwjvrgxnsveedxseeyeykarqnjrtlaliyudpacctzizcftjlunlgnfwcqqxcqikocqffsjyurzwysfjmswvhbrmshjuzsgpwyubtfbnwajuvrfhlccvfwhxfqthkcwhatktymgxostjlztwdxritygbrbibdgkezvzajizxasjnrcjwzdfvdnwwqeyumkamhzoqhnqjfzwzbixclcxqrtniznemxeahfozp"))
 }
+
+func TestCloneGraph(t *testing.T) {
+	graph := GenGraphNode([][]int{{2, 4}, {1, 3}, {2, 4}, {1, 3}})
+	newGraph := cloneGraph(graph)
+	fmt.Printf("%+v\n", newGraph)
+}
+
+func TestCanCompleteCircuit(t *testing.T) {
+	canCompleteCircuit([]int{}, []int{})
+}
+
+func TestCandy(t *testing.T) {
+	fmt.Println(candy([]int{1, 0, 2}))
+	fmt.Println(candy([]int{1, 2, 2}))
+}
+
+func TestSingleNumber(t *testing.T) {
+	fmt.Println(singleNumber([]int{2, 2, 1}))
+	fmt.Println(singleNumber([]int{4, 1, 2, 1, 2}))
+}
+
+func TestSingleNumber2(t *testing.T) {
+	fmt.Println(singleNumber2([]int{1, 1, 1, 3}))
+}
