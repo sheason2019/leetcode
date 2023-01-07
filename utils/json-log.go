@@ -9,6 +9,7 @@ import (
 func JsonLog(val any) error {
 	data, err := json.Marshal(val)
 	if err != nil {
+		fmt.Println(err)
 		return err
 	}
 

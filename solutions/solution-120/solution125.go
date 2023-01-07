@@ -10,13 +10,19 @@ func isPalindrome(s string) bool {
 	left := 0
 	right := len(s) - 1
 	for left < right {
-		for runes[left] == ' ' {
+		for !isWord(runes[left]) {
 			left++
+			if left >= right {
+				break
+			}
 		}
-		for runes[right] == ' ' {
+		for !isWord(runes[right]) {
 			right--
+			if left >= right {
+				break
+			}
 		}
-		if left < right {
+		if left >= right {
 			break
 		}
 
@@ -29,4 +35,17 @@ func isPalindrome(s string) bool {
 	}
 
 	return true
+}
+
+func isWord(r rune) bool {
+	if r >= 'a' && r <= 'z' {
+		return true
+	}
+	if r >= 'A' && r <= 'Z' {
+		return true
+	}
+	if r >= '0' && r <= '9' {
+		return true
+	}
+	return false
 }
